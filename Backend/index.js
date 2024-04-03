@@ -18,19 +18,19 @@ app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
 
-const postData ={
+// const postData ={
 
-    "companyName": "wallshop",
+//     "companyName": "wallshop",
     
-    "ownerName": "rahul",
+//     "ownerName": "rahul",
     
-    "rollNo": "11",
+//     "rollNo": "RA2111031010040",
     
-    "ownerEmail": "sr5752@srmist.edu.in",
+//     "ownerEmail": "sr5752@srmist.edu.in",
     
-    "accessCode": "bntKpm"
+//     "accessCode": "kJtfKH"
     
-    };
+//     };
 
 
 // axios.post('http://20.244.56.144/test/register', postData)
@@ -41,24 +41,24 @@ const postData ={
 //         console.error('Error:', error);
 //     });
 
-//  const authdata={
-//             "companyName": "wallshop",
-//             "clientID": "75458bf4-7f3d-48b7-bced-1aa789dd6735",
-//             "clientSecret": "MnTAPkIujGYaoqBg",
-//             "ownerName": "Rahul",
-//             "ownerEmail": "sr5752@srmist.edu.in",
-//           "rollNo":"11"
-//     }
+ const authdata={
+            "companyName": "wallshop",
+            "clientID": "4ef8d104-ea4f-4f47-87d3-ad9a368974a1",
+            "clientSecret": "SDKpuJoShxAbXvKd",
+            "ownerName": "Rahul",
+            "ownerEmail": "sr5752@srmist.edu.in",
+          "rollNo":"RA2111031010040"
+    }
 
-// axios.post('http://20.244.56.144/test/auth', authdata)
-// .then(response => {
-//     console.log('Response:', response.data);
-// })
-// .catch(error => {
-//     console.error('Error:', error);
-// });
+axios.post('http://20.244.56.144/test/auth', authdata)
+.then(response => {
+    console.log('Response:', response.data);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
 
-const authtoken='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzEyMTU1MDA1LCJpYXQiOjE3MTIxNTQ3MDUsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6Ijc1NDU4YmY0LTdmM2QtNDhiNy1iY2VkLTFhYTc4OWRkNjczNSIsInN1YiI6InNyNTc1MkBzcm1pc3QuZWR1LmluIn0sImNvbXBhbnlOYW1lIjoid2FsbHNob3AiLCJjbGllbnRJRCI6Ijc1NDU4YmY0LTdmM2QtNDhiNy1iY2VkLTFhYTc4OWRkNjczNSIsImNsaWVudFNlY3JldCI6Ik1uVEFQa0l1akdZYW9xQmciLCJvd25lck5hbWUiOiJSYWh1bCIsIm93bmVyRW1haWwiOiJzcjU3NTJAc3JtaXN0LmVkdS5pbiIsInJvbGxObyI6IjExIn0.qlfIwRSGt7wVXFrlIyF8jd4JQxXKg9flgyhhKxxDPog';
+const authtoken='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzEyMTU5MjU5LCJpYXQiOjE3MTIxNTg5NTksImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjRlZjhkMTA0LWVhNGYtNGY0Ny04N2QzLWFkOWEzNjg5NzRhMSIsInN1YiI6InNyNTc1MkBzcm1pc3QuZWR1LmluIn0sImNvbXBhbnlOYW1lIjoid2FsbHNob3AiLCJjbGllbnRJRCI6IjRlZjhkMTA0LWVhNGYtNGY0Ny04N2QzLWFkOWEzNjg5NzRhMSIsImNsaWVudFNlY3JldCI6IlNES3B1Sm9TaHhBYlh2S2QiLCJvd25lck5hbWUiOiJyYWh1bCIsIm93bmVyRW1haWwiOiJzcjU3NTJAc3JtaXN0LmVkdS5pbiIsInJvbGxObyI6IlJBMjExMTAzMTAxMDA0MCJ9.VVjqwyvLYI2OwMeLATLi0e_WR4rVPe_BMnsQGoW_hPY';
 
 axios.get('http://20.244.56.144/test/companies/:companyname/categories/:categoryname/products?top=n&minPrice=p&maxPrice=q',{
     headers: {
